@@ -1,0 +1,13 @@
+[user]
+	name = Giacomo Tagliabue
+	email = giacomo.tag@gmail.com
+[credential]
+[push]
+	default = simple
+[core]
+  # editor = subl -w
+  # @see https://help.github.com/articles/dealing-with-line-endings
+  # Mac
+  # autocrlf = input
+  # PC
+  autocrlf = true
