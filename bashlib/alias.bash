@@ -34,6 +34,7 @@ alias gs='git status -s'
 alias gc='git commit -v -m'
 alias gca='git commit -v -a -m'
 alias glg="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold cyan)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all"
+alias glgs="git log --graph --abbrev-commit --decorate --date=relative --format=format:'%C(bold cyan)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --first-parent"
 alias gl='git pull'
 alias gp='git push'
-alias gd='git diff | mate'
+alias gd='git diff'
