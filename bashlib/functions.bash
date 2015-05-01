@@ -1,6 +1,11 @@
 #Open sublime text
 function subl(){
-  "C:\Users\giaco_000\st3\sublime_text.exe" $1 &
+  "C:\Users\giaco_000\st3\sublime_text.exe" "$1" &
+}
+
+#Open sumatra pdf
+function pdf(){
+  "C:\Users\giaco_000\sumatra\SumatraPDF.exe" "$1" &
 }
 
 # Refresh the bash commands
