@@ -5,7 +5,7 @@
 [push]
   default = simple
 [core]
-  editor = C:/Users/giaco_000/st3/sublime_text.exe
+  editor = nano
   # @see https://help.github.com/articles/dealing-with-line-endings
   # Mac
   # autocrlf = input
@@ -17,12 +17,13 @@
   cos = "!f() { git stash && git co ${1-master} && git stash pop; }; f"
   cowd = checkout -- .
   up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-  cob = checkout -b
   cm = commit -m
   undo = reset HEAD~1 --mixed
   amend = commit --amend --no-edit
   bclean = "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
   bdone = "!f() { git stash && git co ${1-master} && git up && git bclean ${1-master} && git stash pop; }; f"
-  publish = push --set-upstream origin
+  publish = "!f() { git rev-parse --abbrev-ref HEAD | xargs -r git push --set-upstream origin; }; f"
+  cob = "!f() { git checkout -b ${1} && git publish; }; f"
+  rmb = "!f() { git branch -d ${1} && git push origin :${1}; }; f"
   ignore = update-index --assume-unchanged
   renore = update-index --no-assume-unchanged
