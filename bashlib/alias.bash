@@ -28,6 +28,9 @@ fi
 alias md='mkdir -p'
 alias rd='rmdir'
 
+# Git to Hub
+alias git='hub'
+
 # Some git aliasies
 alias gss='git status'
 alias gs='git status -s'
