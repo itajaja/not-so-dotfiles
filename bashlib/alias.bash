@@ -17,6 +17,7 @@ alias -- -='cd -'        # Go back
 
 # Shell History
 alias h='history'
+alias hgrep='h | grep'
 
 # Tree
 if [ ! -x "$(which tree 2>/dev/null)" ]
@@ -41,3 +42,6 @@ alias glgs="git log --graph --abbrev-commit --decorate --date=relative --format=
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
+
+#docker aliases
+alias dockerstart="boot2docker start && export DOCKER_HOST=tcp://192.168.59.103:2376 && export DOCKER_CERT_PATH='C:\Users\giaco_000\.boot2docker\certs\boot2docker-vm' && export DOCKER_TLS_VERIFY=1"
